@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n, bLen = 0, maxbLen = 0;
+    
+    cin >> n;
+    
+    while(n > 0)
+    {
+        bLen = 0;
+        
+        while(n % 2 == 0)
+        {
+            n /= 2;
+        }
+        
+        while(n % 2 == 1 and n > 0)
+        {
+            n /= 2;
+            bLen ++;
+        }
+        
+        if(bLen > maxbLen)
+        {
+            maxbLen = bLen;
+        }
+    }
+    
+    cout << maxbLen;
+
+    return 0;
+}
